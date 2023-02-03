@@ -1,6 +1,4 @@
 import sys
-
-
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout
 from qtwidgets import Toggle, AnimatedToggle
 
