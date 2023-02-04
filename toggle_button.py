@@ -11,7 +11,6 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.uic = Ui_MainWindow()
         self.uic.setupUi(self)
-        self.a = 0
 
         toggle = Switch()
         toggle.clicked.connect(self.hh)
