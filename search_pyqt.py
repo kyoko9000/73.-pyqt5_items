@@ -1,3 +1,4 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QGridLayout, QCompleter, QLineEdit, QApplication, QPushButton
 import sys
 
@@ -13,9 +14,10 @@ class Window(QWidget):
         self.layout.addWidget(self.lineedit, 0, 0)
 
         self.names = ["Apple", "Alps", "Berry", "Cherry"]
-        self.completer = QCompleter(self.names)
-        model = self.completer.model()
-        model.setStringList(self.names)
+        self.new_list = []
+        for i in self.names:
+            self.new_list.append(i.lower())
+        self.completer = QCompleter(self.new_list)
         self.lineedit.textChanged.connect(self.result)
         self.completer.activated.connect(self.tip_balloon)
 
@@ -23,9 +25,8 @@ class Window(QWidget):
         self.lineedit.setCompleter(self.completer)
 
         text = self.lineedit.text()
-        names = ["Apple", "Alps", "Berry", "Cherry"]
         lists = []
-        for i in names:
+        for i in self.new_list:
             a = i.find(text)
             if a >= 0:
                 lists.append(i)
