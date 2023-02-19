@@ -33,10 +33,10 @@ class Window(QMainWindow):
         label.setAlignment(Qt.AlignCenter)
 
         # setting geometry to the label
-        label.setGeometry(50, 20, 300, 300)
+        label.setGeometry(50, 20, 400, 300)
 
         # setting border
-        # label.setStyleSheet("border : 10px solid black")
+        label.setStyleSheet("border : 10px solid black")
 
         # creating a QGraphicsDropShadowEffect object
         shadow = QGraphicsDropShadowEffect()
