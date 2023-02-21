@@ -17,10 +17,10 @@ class MainWindow(QMainWindow):
         self.button.clicked.connect(self.to_pdf)
 
         self.w = QTableWidget(10, 10)
-        for i in range(10):
-            for j in range(10):
-                it = QTableWidgetItem("{}-{}".format(i, j))
-                self.w.setItem(i, j, it)
+        it = QTableWidgetItem("hi")
+        self.w.setItem(1, 3, it)
+        it = QTableWidgetItem("44. hi")
+        self.w.setItem(5, 2, it)
 
         layout = QVBoxLayout()
         layout.addWidget(self.w)
