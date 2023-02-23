@@ -25,6 +25,7 @@ class Window(QMainWindow):
         label.setGeometry(50, 20, 400, 300)
         # setting border
         label.setStyleSheet("border : 10px solid black")
+
         # creating a QGraphicsDropShadowEffect object
         shadow = QGraphicsDropShadowEffect()
         # set color for shadow
