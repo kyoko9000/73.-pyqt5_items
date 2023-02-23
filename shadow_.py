@@ -14,10 +14,7 @@ class Window(QMainWindow):
         # setting geometry
         self.setGeometry(100, 100, 600, 400)
         # calling method
-        self.UiComponents()
 
-    # method for widgets
-    def UiComponents(self):
         # creating label
         label = QLabel("Label", self)
         # setting font and size
