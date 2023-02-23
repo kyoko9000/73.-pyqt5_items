@@ -31,7 +31,7 @@ class Window(QMainWindow):
         # set color for shadow
         shadow.setColor(QColor(63, 63, 63, 180))
         # set offset for shadow
-        shadow.setOffset(5, 5)
+        shadow.setOffset(10, 10)
         # setting blur radius
         # shadow.setBlurRadius(15)
         # adding shadow to the label
