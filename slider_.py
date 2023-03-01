@@ -9,12 +9,12 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.uic = Ui_MainWindow()
         self.uic.setupUi(self)
-        self.uic.horizontalSlider.valueChanged.connect(self.valuechange)
+        self.uic.horizontalSlider.valueChanged.connect(self.changevalue)
 
-    def valuechange(self):
-        size = self.uic.horizontalSlider.value()
-        print(size)
-        self.uic.label.setText(str(size))
+    def changevalue(self):
+        values = self.uic.horizontalSlider.value()
+        print(values)
+        self.uic.label.setText(str(values))
 
 
 if __name__ == "__main__":
